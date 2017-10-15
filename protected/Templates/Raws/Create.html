@@ -1,0 +1,17 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<h2>Задать новое сырье</h2>
+
+<form method="post" action="/raws/save">
+
+    <div class="form-group">
+        <label for="product[title]">Название сырья:</label>
+        <input type="text" class="form-control" name="raw[title]" id="raw[title]" placeholder="Название сырья">
+    </div>
+
+    <button type="submit" class="btn btn-default">Сохранить</button>
+</form>
+
+{% endblock %}

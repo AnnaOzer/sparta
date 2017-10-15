@@ -1,0 +1,18 @@
+/*
+
+article + article {
+    page-break-before: always;
+}
+*/
+
+article {
+    page-break-before: always;
+}
+
+
+.extra {
+    font-weight: 700;
+
+    font-variant: small-caps;
+}
+

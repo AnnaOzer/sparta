@@ -1,0 +1,24 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<a href="/raws/create">Добавить сырье</a><br><br>
+
+<table class="table table-striped">
+    <tr>
+        <th>Название сырья</th>
+
+        <th></th>
+        <th></th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        <td>{{ item.title }}</td>
+
+        <td><a class="btn btn-success" href="/raws/update?id={{ item.Pk }}">Редактировать</a></td>
+        <td><a class="btn btn-danger" href="/raws/delete?id={{ item.Pk }}">Удалить</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Body Care v.1.00</title>
+  {{ publishCss() }}
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        Body Care
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+
+           <li><a href="/Products/">Продукция</a></li>
+           <li><a href="/Raws/">Сырье</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+{{ publishJs() }}
+</body>
+</html>

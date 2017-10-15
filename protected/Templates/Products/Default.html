@@ -1,0 +1,27 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<a href="/products/create">Добавить продукт</a><br><br>
+
+<table class="table table-striped">
+    <tr>
+        <th>Название продукта</th>
+        <th>Название продукта русское официальное</th>
+        <th>Название продукта английское официальное</th>
+
+        <th></th>
+        <th></th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        <td>{{ item.title }}</td>
+        <td>{{ item.titleRus }}</td>
+        <td>{{ item.titleEng }}</td>
+        <td><a class="btn btn-success" href="/products/update?id={{ item.Pk }}">Редактировать</a></td>
+        <td><a class="btn btn-danger" href="/products/delete?id={{ item.Pk }}">Удалить</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

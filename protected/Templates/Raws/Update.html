@@ -1,0 +1,19 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<h2>Редактировать сырье</h2>
+
+<form method="post" action="/raws/save">
+    <input type="hidden" name="raw[id]" value="{{ item.Pk }}">
+
+    <div class="form-group">
+        <label for="raw[title]">Название сырья:</label>
+        <input type="text" class="form-control" name="raw[title]" id="raw[title]"
+               placeholder="Название сырья" value="{{ item.title }}">
+    </div>
+
+    <button type="submit" class="btn btn-default">Сохранить</button>
+</form>
+
+{% endblock %}

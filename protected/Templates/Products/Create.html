@@ -1,0 +1,27 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<h2>Задать новый продукт</h2>
+
+<form method="post" action="/products/save">
+
+    <div class="form-group">
+        <label for="product[title]">Название продукта:</label>
+        <input type="text" class="form-control" name="product[title]" id="product[title]" placeholder="Название продукта">
+    </div>
+
+    <div class="form-group">
+        <label for="product[titleRus]">Официальное Русское название продукта:</label>
+        <input type="text" class="form-control" name="product[titleRus]" id="product[titleRus]" placeholder="Название продукта">
+    </div>
+
+    <div class="form-group">
+        <label for="product[titleEng]">Официальное Английское название продукта:</label>
+        <input type="text" class="form-control" name="product[titleEng]" id="product[titleEng]" placeholder="Название продукта">
+    </div>
+
+    <button type="submit" class="btn btn-default">Сохранить</button>
+</form>
+
+{% endblock %}
